@@ -8,13 +8,7 @@
 <?php //require("redirec2.inc");
 
 //HACEER?>
- <?php
- 
- echo 'Te haz loguedo como '.$_SESSION['usuario'];
 
-
-
-?>
 <?php
 
 

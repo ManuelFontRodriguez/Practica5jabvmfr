@@ -4,6 +4,15 @@
 
 if(isset($_POST['submit'])){
     if(isset($_POST['sure']) and  $_POST['sure'] == $_SESSION['usuario']) {
+        if(!isset($_COOKIE['UltimaVisita'])) { 
+    $_SESSION['ultima'] = 'Es tu primera visita'; 
+   setcookie('UltimaVisita', date(DATE_COOKIE), time() + 365 * 24 * 60 * 60); 
+ } 
+ else{
+    $_SESSION['ultima'] = 'Es tu primera visita'; 
+    setcookie('UltimaVisita', date(DATE_COOKIE), time() + 365 * 24 * 60 * 60); 
+ }
+
     header("Location: principallogged.php");
     
     }
