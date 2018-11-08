@@ -5,7 +5,13 @@
 <?php //require("redirec2.inc");
 
 //HACEER?>
+ <?php
+ 
+ echo 'Te haz loguedo como '.$_SESSION['usuario'];
 
+
+
+?>
 <?php
 
 
@@ -33,17 +39,7 @@
 
    }
 
-   if(!isset($_SESSION['usuario'])){
 
-
-    $_SESSION['usuario']=$user;
-    $_SESSION['password']=$password;
-    echo 'Te haz loguedo como '.$_SESSION['usuario'];
-
-
- 
- 
-   }
 ?>
 <!-- El cuerpo --> 
 <body> 
@@ -76,13 +72,13 @@
                 <br>
                 
                 <label>Estos son tus datos, ¿SON CORRECTOS? <br> Si aceptas, se confirmará el registro, sino volverás a hacerlo.<br><br></label>
-                <label><input type="radio" name="sure" value="y"> SÍ</label>
+                <label><input type="radio" name="sure" value="<?php echo $_SESSION['usuario']=$user;?>"> SÍ</label>
                 <label><input type="radio" name="sure" value="n"> NO</label>
                 <br><br>
                 
   
                 
-                <p id="bot"><input name="submit" type="submit" id="boton" value="Registrarse" class="boton"/></p>
+                <p id="bot"><input name="submit" type="submit" id="boton" value="CONFIRMAR" class="boton"/></p>
 
                 </form>
 

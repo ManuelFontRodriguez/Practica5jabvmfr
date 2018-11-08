@@ -1,5 +1,8 @@
+<?php session_start(); ?>
+
 <?php require("cabecera.inc"); ?>
 <?php require("menu.inc"); ?>
+
 
 <!-- El cuerpo --> 
 <body> 

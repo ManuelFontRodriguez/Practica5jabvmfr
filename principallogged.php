@@ -1,5 +1,7 @@
 <?php session_start(); ?>
 
+<?php require("redirec.inc"); ?>
+
 <?php require("cabecera.inc"); ?>
 
  <?php

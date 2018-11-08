@@ -1,7 +1,9 @@
+<?php session_start(); ?>
+
 <?php
 
 if(isset($_POST['submit'])){
-    if(isset($_POST['sure']) and  $_POST['sure'] == 'y') {
+    if(isset($_POST['sure']) and  $_POST['sure'] == $_SESSION['usuario']) {
     header("Location: principallogged.php");
     
     }

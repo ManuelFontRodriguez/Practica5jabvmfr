@@ -2,6 +2,8 @@
 
 <?php require("menu.inc"); ?>
 
+<?php require("redirec2.inc"); ?>
+
 
  <?php
    $titu = $_POST['titu'];
