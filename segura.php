@@ -5,7 +5,7 @@ session_start();
 
 echo 'Te haz loguedo como '.$_SESSION['usuarios'];
 
-sadasdsa
+sadasdsass
 ?>
 <html>
 </html>
