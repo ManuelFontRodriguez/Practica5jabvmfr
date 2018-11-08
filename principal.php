@@ -1,7 +1,20 @@
 <?php session_start(); ?>
 
+<?php require("mantenercookie.inc"); ?>
 
 <?php require("cabecera.inc"); ?>
+
+<?php
+ 
+ if(isset($_SESSION['usuario'])){
+    
+    header("Location: principallogged.php");
+
+
+   }
+
+?>
+
 <?php
 
 global $wppa;//variables globales, 2 arrays, wppa con las variables que el usuario pone, creedeciales los nombres que le quieras poner a las cookies
@@ -20,12 +33,28 @@ if(isset($_POST['enviar'])){//isset se hace una vez el usuario le de a enviar
     $_SESSION['usuario']=$_POST['usuario'];
     $_SESSION['password']=$_POST['password'];
     
-    echo '<br>Te logiaste perra, tu usuario es '.$_SESSION['usuario'];
+
+
+ if(!isset($_COOKIE['UltimaVisita'])) 
+ { 
+    $_SESSION['ultima'] = 'Es tu primera visita'; 
+   setcookie('UltimaVisita', date(DATE_COOKIE), time() + 365 * 24 * 60 * 60); 
+ } 
+ else 
+ { 
+
+$_SESSION['ultima'] = 'Tú última conexión fue el '.$_COOKIE['UltimaVisita']; 
+   setcookie('UltimaVisita', date(DATE_COOKIE), time() + 365 * 24 * 60 * 60); 
+  
+ } 
     header("Location: principallogged.php");
+
 
 }
     elseif($_POST['usuario']!="teste" or $_POST['password']!="teste"){//no cumple el ejemplo, pa tu casa
-    echo '<br>Creedenciales incorrectos tolai';
+    
+    
+    //echo '<br>Creedenciales incorrectos tolai';
 
 
 
@@ -37,27 +66,10 @@ if($wppa[0]=="teste" && $wppa[1]=="teste"){// comprueba que el usuario se pueda 
 //crea las cookies, 3 parametros ( nombre de la cookie,  valor de la cookie, tiempo de expiracion de la cookie)
 setcookie( $Creedenciales[0], $wppa[0] , time() + (86400 * 90+3600), "/"); // 86400 = 1 day
 setcookie( $Creedenciales[1], $wppa[1] , time() + (86400 * 90+3600), "/"); // 86400 = 1 day
-printf("<br>  tus cookies  se han guardado desgraciao"); 
-}
-}
-else{
-printf("<br>  tus cookies NO se han guardado desgraciao"); 
-  
 }
 }
 
-
-//MANTENER SESION ABIERTA
-if (isset($_COOKIE[$Creedenciales[0]])) {
-    
-    session_register("susuario"); // registrar $variable en session.
-    $susuario=[$wppa[0]];; // El valor de la $variable se puede dar
-    $_SESSION['usuario']=$_COOKIE[$Creedenciales[0]];
-    $_SESSION['password']=$_COOKIE[$Creedenciales[1]];
-    header("Location: principallogged.php");
-
 }
-
 
 
 
@@ -90,7 +102,15 @@ if (isset($_COOKIE[$Creedenciales[0]])) {
             <li><a href="registro.html"><span></span>&nbsp<span>Registro</span></a></li>
             --> 
          </ul>
-    </nav>            
+    </nav> 
+    <?php
+
+    if(!empty($_POST['usuario']) and empty(!$_POST['password']))
+    if($_POST['usuario']!="teste" or $_POST['password']!="teste"){//no cumple el ejemplo, pa tu casa
+
+    echo "<br>Credenciales incorrectos<br>";
+ }
+    ?>           
     <br>
     <form id="loginPrincipal" action="principal.php" method="POST" >
     <label>Nombre: <input type="text" name="usuario" id="usuario" required ></label>
@@ -98,8 +118,6 @@ if (isset($_COOKIE[$Creedenciales[0]])) {
     <button type="submit" class="boton" name="enviar" id="submit">Login</button><br>
     <label>REcuerdame como si fuera esta la primera veeez:  <input type="checkbox" name="cbox1" value="1"></label><br>
     </form>
-
- 
 
 
     <br>    
@@ -109,7 +127,7 @@ if (isset($_COOKIE[$Creedenciales[0]])) {
                 <div>
                 <article>
                                 
-                            <a title="foto" href="ultimafoto.html"> <div align="center"><img id="ultsfotos" src="foto.jpg"></div></a>
+                            <a title="foto" href="ultimafoto.php"> <div align="center"><img id="ultsfotos" src="foto.jpg"></div></a>
                             <p style="text-align:center">Descripción</p>
                             <br>
                             <footer>
@@ -119,7 +137,7 @@ if (isset($_COOKIE[$Creedenciales[0]])) {
                                 
                 <article>
                                 
-                            <a title="foto" href="ultimafoto.html"> <div align="center"><img src="foto.jpg"></div></a>
+                            <a title="foto" href="ultimafoto.php"> <div align="center"><img src="foto.jpg"></div></a>
                             <p style="text-align:center">Descripción</p>
                             <br>
                             <footer>
@@ -128,7 +146,7 @@ if (isset($_COOKIE[$Creedenciales[0]])) {
                 </article>
                                <article>
                                 
-                            <a title="foto" href="ultimafoto.html"> <div align="center"><img src="foto.jpg"></div></a>
+                            <a title="foto" href="ultimafoto.php"> <div align="center"><img src="foto.jpg"></div></a>
                             <p style="text-align:center">Descripción</p>
                             <br>
                             <footer>
@@ -137,7 +155,7 @@ if (isset($_COOKIE[$Creedenciales[0]])) {
                 </article>              
                   <article>
                                 
-                            <a title="foto" href="ultimafoto.html"> <div align="center"><img src="foto.jpg"></div></a>
+                            <a title="foto" href="ultimafoto.php"> <div align="center"><img src="foto.jpg"></div></a>
                             <p style="text-align:center">Descripción</p>
                             <br>
                             <footer>
@@ -146,7 +164,7 @@ if (isset($_COOKIE[$Creedenciales[0]])) {
                 </article>               
                  <article>
                                 
-                            <a title="foto" href="ultimafoto.html"> <div align="center"><img src="foto.jpg"></div></a>
+                            <a title="foto" href="ultimafoto.php"> <div align="center"><img src="foto.jpg"></div></a>
                             <p style="text-align:center">Descripción</p>
                             <br>
                             <footer>

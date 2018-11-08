@@ -1,17 +1,10 @@
 <?php session_start(); ?>
 
+
 <?php require("redirec.inc"); ?>
+<?php require("mantenercookie.inc"); ?>
 
 <?php require("cabecera.inc"); ?>
-
- <?php
- 
-     echo 'Te haz loguedo como '.$_SESSION['usuario'];
-
-
-
-?>
-
 
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -20,7 +13,7 @@
 <body> 
     <header>
     
-     <a title="FlicktriX - Página de inicio" href="principal.php"><img id="logo" src="camera.png" alt="logo" /></a>
+     <a title="FlicktriX - Página de inicio" href="principallogged.php"><img id="logo" src="camera.png" alt="logo" /></a>
 
 
     </header>
@@ -45,6 +38,15 @@
          </ul>
     </nav>            
 
+ <?php
+ 
+ echo 'Te haz loguedo como '.$_SESSION['usuario'].'<br>';
+ echo $_SESSION['ultima'];
+
+
+
+
+?>
     <br>
                 <section>
                     <h2 class="tituloSec">COMPARTE TUS FOTOS CON TUS AMIGOS.</h2>
@@ -52,7 +54,7 @@
                 <div>
                 <article>
                                 
-                            <a title="foto" href="ultimafoto.html"> <div align="center"><img id="ultsfotos" src="foto.jpg"></div></a>
+                            <a title="foto" href="ultimafoto.php"> <div align="center"><img id="ultsfotos" src="foto.jpg"></div></a>
                             <p style="text-align:center">Descripción</p>
                             <br>
                             <footer>
@@ -62,7 +64,7 @@
                                 
                 <article>
                                 
-                            <a title="foto" href="ultimafoto.html"> <div align="center"><img src="foto.jpg"></div></a>
+                            <a title="foto" href="ultimafoto.php"> <div align="center"><img src="foto.jpg"></div></a>
                             <p style="text-align:center">Descripción</p>
                             <br>
                             <footer>
@@ -71,7 +73,7 @@
                 </article>
                                <article>
                                 
-                            <a title="foto" href="ultimafoto.html"> <div align="center"><img src="foto.jpg"></div></a>
+                            <a title="foto" href="ultimafoto.php"> <div align="center"><img src="foto.jpg"></div></a>
                             <p style="text-align:center">Descripción</p>
                             <br>
                             <footer>
@@ -80,7 +82,7 @@
                 </article>              
                   <article>
                                 
-                            <a title="foto" href="ultimafoto.html"> <div align="center"><img src="foto.jpg"></div></a>
+                            <a title="foto" href="ultimafoto.php"> <div align="center"><img src="foto.jpg"></div></a>
                             <p style="text-align:center">Descripción</p>
                             <br>
                             <footer>
@@ -89,7 +91,7 @@
                 </article>               
                  <article>
                                 
-                            <a title="foto" href="ultimafoto.html"> <div align="center"><img src="foto.jpg"></div></a>
+                            <a title="foto" href="ultimafoto.php"> <div align="center"><img src="foto.jpg"></div></a>
                             <p style="text-align:center">Descripción</p>
                             <br>
                             <footer>

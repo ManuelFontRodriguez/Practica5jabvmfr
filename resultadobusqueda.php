@@ -1,8 +1,14 @@
+<?php session_start(); ?>
+
 <?php require("cabecera.inc"); ?>
 
 <?php require("menu.inc"); ?>
 
+<?php require("mantenercookie.inc"); ?>
+
 <?php require("redirec2.inc"); ?>
+
+
 
 
  <?php
@@ -48,7 +54,7 @@
                 <div>
                         <article>
                             <h2>IMAGEN</h2>
-                           <a title="foto" href="ultimafoto.html"> <div align="center"><img src="foto.jpg" width="100%" height="85%"></div></a>
+                           <a title="foto" href="ultimafoto.php"> <div align="center"><img src="foto.jpg" width="100%" height="85%"></div></a>
                             
                             <h3 style="text-align:center"><a href="ultimafoto.html">Foto</a></h3>
 
@@ -65,7 +71,7 @@
                         </article>
                         <article>
                                 <h2>IMAGEN</h2>
-                           <a title="foto" href="ultimafoto.html"> <div align="center"><img src="foto.jpg" width="100%" height="85%"></div></a>
+                           <a title="foto" href="ultimafoto.php"> <div align="center"><img src="foto.jpg" width="100%" height="85%"></div></a>
                              <h3 style="text-align:center"><a href="ultimafoto.html">Foto</a></h3>
    
                                 
@@ -81,7 +87,7 @@
                             </article>
                             <article>
                                     <h2>IMAGEN</h2>
-                           <a title="foto" href="ultimafoto.html"> <div align="center"><img src="foto.jpg" width="100%" height="85%"></div></a>
+                           <a title="foto" href="ultimafoto.php"> <div align="center"><img src="foto.jpg" width="100%" height="85%"></div></a>
                                     <h3 style="text-align:center"><a href="ultimafoto.html">Foto</a></h3>
 
                                     

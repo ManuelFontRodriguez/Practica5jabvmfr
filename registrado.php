@@ -1,5 +1,7 @@
 <?php session_start(); ?>
 
+<?php require("mantenercookie.inc"); ?>
+
 <?php require("redirec.inc"); ?>
 <?php require("cabecera.inc"); ?>
 <?php require("menu.inc"); ?>
@@ -16,7 +18,7 @@
         <div id="menuPerfil">
             <a id="Datos" title="misdatos" href=""> Mis datos</a>
             <a id="Albumes" title="misalbumes" href=""> Mis álbumes</a>
-            <a id="crearAlbumes" title="micrearalbum" href="creaalbum.html"> Crear Álbum</a>
+            <a id="crearAlbumes" title="micrearalbum" href="creaalbum.php"> Crear Álbum</a>
             <a id="solicitarAlbumes" title="misolicitaralbum" href="formulario.php"> Solicitar Álbum</a>
         </div>
         <br>

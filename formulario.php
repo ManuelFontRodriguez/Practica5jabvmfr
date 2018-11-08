@@ -1,5 +1,6 @@
 <?php session_start(); ?>
 
+<?php require("mantenercookie.inc"); ?>
 <?php require("redirec.inc"); ?>
 <?php require("cabecera.inc"); ?>
 <?php require("menu.inc"); ?>
@@ -16,32 +17,32 @@
         </nav>
                                 
                 
-                <form id="formPedirAlbum" action="auxi2.php" method="POST">
+                <form id="formPedirAlbum" action="respuestaalbum.php" method="POST">
                 <br>
 
                 <label>Nombre: <input type="text" name="nombre" id="nombre" placeholder="Pon tu nombre y apellidos" autofocus="" required="" maxlength="200" ></label><br><br></input>
                 <label>Título Álbum: <input type="text" name="titalbum" id="titalbum" placeholder="Para la cubierta del álbum"  required="" maxlength="200" ></label><br><br></input>
                 <label>Texto adicional: <textarea name="comentario" rows="5" cols="40" placeholder="Dedicatoria o descripción del álbum" maxlength="4000"></textarea></label><br><br></input>
-                <label>Email: <input type="email" name="emailaddress" placeholder="Pon tu email" required="" maxlength="200"></label><br><br></input>
+                <label>Email: <input type="email" name="email" placeholder="Pon tu email" required="" maxlength="200"></label><br><br></input>
                 <label>Dirección envío: <input type="text" name="direnvio" id="nombre" placeholder="Calle, número, piso, puerta, código postal, localidad, provincia, país" required="" maxlength="200" ></label></input>
                 <label>Código postal: <input type="number" name="cp" id="cp" placeholder="Código postal" required="" maxlength="10"></label><br><br></input>
-                <label>País: <input type="text" name="nombre" id="pais" placeholder="País" required="" maxlength="200"></label></input>
+                <label>País: <input type="text" name="pais" id="pais" placeholder="País" required="" maxlength="200"></label></input>
                 <label>Provincia: <input type="text" name="provincia" id="provincia" placeholder="Provincia" required="" maxlength="200"></label></input>
                 <label>Localidad: <input type="text" name="localidad" id="localidad" placeholder="Localidad" required="" maxlength="200"></label><br><br></input>
                 <label>Color de la portada: <input type="color" name="color" id="color" required="" ></label><br><br></input>
                 <label>Número de copias: <input type="number" name="copias" id="copias" required=""min="1" value="1" ></label><br><br></input>
                 <label>Resolución de las fotos: <input type="number" name="resolucion" id="resolucion"min="150" value="150"max="900" ></label><br><br></input>
                 <label for="album" required="">Álbum de PI:</label>	
-                <select name="select"id="album">
+                <select name="selectalb"id="album">
                         <option value="value1">xxx</option> 
                         <option value="value2" selected>xxx</option>
                         <option value="value3">xxx</option>
                   </select><br><br>
                   
-                <label>Fecha de recepción: <input type="date" name="nombre" id="fecharec" required="" min="<?php echo date('Y-n-j'); ?>" value="<?php echo date('Y-n-j'); ?>" ></label>  Fecha aproximada de recepción <br><br></input>
+                <label>Fecha de recepción: <input type="date" name="frec" id="fecharec" required="" min="<?php echo date('Y-n-j'); ?>" value="<?php echo date('Y-n-j'); ?>" ></label>  Fecha aproximada de recepción <br><br></input>
                 ¿Impresión a color?
-                <label><input type="radio" name="c" value="co"> Color</label></input>
-                <label><input type="radio" name="c" value="bc"> Blanco y negro</label></input>
+                <label><input type="radio" name="c" value="A Color"> Color</label></input>
+                <label><input type="radio" name="c" value="Blanco y negro"> Blanco y negro</label></input>
                 <br><br>
 
                 <p id="bot"><input name="submit" type="submit" id="boton" value="Solicitar" class="boton"/></input></p>

@@ -1,5 +1,7 @@
 <?php session_start(); ?>
 
+<?php require("mantenercookie.inc"); ?>
+
 <?php require("cabecera.inc"); ?>
 <?php require("menu.inc"); ?>
 <?php //require("redirec2.inc");
@@ -13,10 +15,6 @@
 
 ?>
 <?php
-
-
- 
-
 
 
    $user = $_POST['nombre'];

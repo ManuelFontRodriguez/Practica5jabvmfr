@@ -1,32 +1,23 @@
-<!DOCTYPE html> 
-<html lang="es"> 
+<?php session_start(); ?>
+
+<?php require("mantenercookie.inc"); ?>
+<?php require("cabecera.inc"); ?>
+<?php require("menu.inc"); ?>
 <!-- La cabecera --> 
-<head> 
 
-<link rel="stylesheet" type="text/css" href="estilo.css" media=screen>
-<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
-<link rel="shortcut icon" type="image/x-icon" href="camera.ico">
-<link rel="stylesheet" type="text/css" href="imp.css"  media="print">
-<meta charset="utf-8" /> 
-<meta name="author" content="GrupoX" /> 
-<meta name="keywords" content="HTML5, web" /> 
-<title> Última foto - FlicktriX </title>
-
-</head> 
 <!-- El cuerpo --> 
 <body> 
-        <header>
-                <a title="logo" href="principal.html"><img id="logo" src="camera.png" alt="logo" /></a>
-                <br>
-                <br>
-        
-            </header>
+
+<?php require("logo.inc"); ?>
+
+
+
         <nav id="menuPrincipal">
             <ul>
-                <li><a href="principal.html"><span>&nbsp</span><span>FlicktriX</span></a></li>
-                <li><a href="principal.html"><span></span>&nbsp<span>FlicktriX</span></a></li>
+                <li><a href="<?php echo $menu;?>"><span>&nbsp</span><span>FlicktriX</span></a></li>
+                <li><a href="<?php echo $menu;?>"><span>&nbsp</span><span>FlicktriX</span></a></li>
             </ul>
-        </nav>                
+        </nav>             
                 
                 <section>
                 <div>
