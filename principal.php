@@ -27,7 +27,7 @@ print_r ($wppa)."\n" ;//imprime el array
 if(isset($_POST['enviar'])){//isset se hace una vez el usuario le de a enviar
     if(empty($_POST['usuario']) || empty($_POST['password']))//empty comprueba que no haya un campo vacio, como el bernabeu ahora mismo
     echo '<br>Debes llenar todos los datos';
-    elseif($_POST['usuario']=="teste" and $_POST['password']=="teste"){//ejemplo que he puesto, si esta bien pa dentro
+    elseif(($_POST['usuario']=="teste" and $_POST['password']=="teste") ||($_POST['usuario']=="teste1" and $_POST['password']=="teste")){//ejemplo que he puesto, si esta bien pa dentro
     
     $wppa = array($_POST["usuario"] ,$_POST["password"]);
     $_SESSION['usuario']=$_POST['usuario'];
@@ -62,7 +62,7 @@ $_SESSION['ultima'] = 'Tú última conexión fue el '.$_COOKIE['UltimaVisita'];
 }
 if(isset($_POST['enviar'])){
 if(isset($_POST['cbox1']) and  $_POST['cbox1'] == '1') {
-if($wppa[0]=="teste" && $wppa[1]=="teste"){// comprueba que el usuario se pueda meter, se puede meter arriba, pero esta aqui pa que se vea bienif(isset($_POST['enviar']))
+if($wppa[0]=="teste" && $wppa[1]=="teste"||$wppa[0]=="teste1" && $wppa[1]=="teste"){// comprueba que el usuario se pueda meter, se puede meter arriba, pero esta aqui pa que se vea bienif(isset($_POST['enviar']))
 //crea las cookies, 3 parametros ( nombre de la cookie,  valor de la cookie, tiempo de expiracion de la cookie)
 setcookie( $Creedenciales[0], $wppa[0] , time() + (86400 * 90+3600), "/"); // 86400 = 1 day
 setcookie( $Creedenciales[1], $wppa[1] , time() + (86400 * 90+3600), "/"); // 86400 = 1 day

@@ -8,24 +8,9 @@
 <meta name="keywords" content="HTML5, web" /> 
 <title> FlicktriX </title>
 <link rel="shortcut icon" type="image/x-icon" href="fotoprueba.ico">
-<?php
- 
- $aux="estilo.css";
-
- if(isset($_SESSION['usuario'])&&$_SESSION['usuario']=='teste1'){
-
-    
-    $aux="alternativo1.css";
-
- }
-   
-
-
-?>
-
-
-<link rel="stylesheet" type="text/css" href="<?php echo $aux;?>"  media=screen>    
+<link rel="stylesheet" type="text/css" href="estilo.css"  media=screen>    
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand">
+<link rel="alternate stylesheet" type="text/css" href="alternativo1.css" title="Estilo alternativo1">
 <link rel="stylesheet" type="text/css" href="imp.css"  media="print">
 
 </head> 

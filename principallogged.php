@@ -3,8 +3,8 @@
 
 <?php require("redirec.inc"); ?>
 <?php require("mantenercookie.inc"); ?>
-
 <?php require("cabecera.inc"); ?>
+
 
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
