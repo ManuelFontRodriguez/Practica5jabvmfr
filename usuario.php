@@ -1,6 +1,7 @@
 <?php session_start(); ?>
 
 <?php require("mantenercookie.inc"); ?>
+<?php require("redirec5.inc"); ?>
 
 <?php require("cabecera.inc"); ?>
 <?php require("menu.inc"); ?>
