@@ -1,0 +1,337 @@
+*{
+	box-sizing: border-box;
+	font-family: 'Quicksand', sans-serif;
+
+}
+
+body{
+	
+	min-width: auto;
+	max-width: auto;
+	margin: 0 auto;
+	padding: .5em;
+}
+	body>nav{
+		background-color: whitesmoke;
+	}
+		body>nav>ul{
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			max-height: 2em;
+			overflow: hidden;
+			background-color: black;
+
+			transition:max-height 1s ease-in-out;
+		}
+			body>nav>ul>li>a{
+				display: block;
+				padding: .2em;
+				text-decoration: none;
+				font-weight: bold;
+				text-decoration-color: white;
+			}
+	
+				body>nav>ul>li>a:visited{
+					background-color: black;
+					color: white;
+				}	
+				body>nav>ul>li>a:hover{
+					background-color: black;
+					color: rgb(168, 165, 147);
+				}
+
+				body>nav>ul>li:first-of-type>label{
+					font-weight: bold;
+					margin-left: .2em;
+					display: inline-block;
+					font-size: 1.5em;
+					cursor: pointer;
+
+					transition: 1s ease-in-out;
+				}
+				body>nav>label{
+					font-weight: bold;
+					margin-left: .2em;
+					display: inline-block;
+					font-size: 1em;
+					cursor: pointer;
+
+					transition: 1s ease-in-out;
+				}
+				input{
+					background-color: rgba(252, 221, 221, 0.541);
+
+					
+				}
+				#ckbmenu{
+					display: none;
+				}
+			
+				#ckbmenu:checked+ul{
+					max-height: 20em;
+				}
+					#ckbmenu:checked+ul>li:first-of-type>label{
+						transform: rotate(90deg);
+					}
+
+/* CABECERA */
+
+	body>header{
+		display: flex;
+		flex-direction: column;
+
+		overflow: hidden;
+		background-color: rgba(168, 46, 66, 0.842);
+		padding: .5em;
+		color: #fff;
+		height: 100px;
+		text-align: center;
+
+	}
+		body>header>img{
+			align-self: center;
+			background-color: #fff;
+		}
+
+		body>header>div{
+			display: flex;
+			flex-direction: column;
+		}
+		body>header>div>h1{
+				margin:.2em 0;
+			}
+			body>header>div>p{
+				border-top: 1px solid #fff;
+				border-bottom: 1px solid #fff;
+				margin: 0;
+				padding: .5em;
+			}
+
+/*CONTENIDO*/
+
+
+	body>section{
+		background-color: #ccc;
+		padding: .5em
+	}
+	body>section>h2{
+		text-align: center;
+		border-bottom: 1px solid black;
+	}
+	body>section>div{
+		display: flex;
+		flex-direction: column;
+	}
+	body>section>div>article{
+		background-color: #fff;
+		padding: .5em;
+		margin: .5em 0;
+	}
+	body>section>div>article>a>div>img {
+		height: 85%;
+		width: 100%;
+	}
+
+/* BODY > FOOTER*/
+
+		body>footer{
+			position:relative;
+			top:80%;
+			overflow: hidden;
+			background-color:rgba(168, 46, 66, 0.842);
+			padding: 0.25em;
+			text-align: center;
+			text-decoration-color:black;
+		}
+			body>piedepagina>p{
+				margin: 0;
+			}
+
+
+			/*MEDIA QUERIES*/
+			
+@media all and (min-width: 480px){
+	body>header{
+		flex-direction: row;
+	}
+	body>nav>ul>li{
+		display: inline-block;
+	}
+	body>nav>ul>li:first-of-type{
+		display: none;
+	}
+		body>nav>ul>li>a>span:nth-of-type(2){
+		display: none;
+	}
+
+}
+
+
+@media all and (min-width:640px){
+	body>nav>ul>li>a>span:nth-of-type(2){
+		display: inline-block;
+	}
+	
+
+}
+@media all and (min-width: 580px){
+	body>header{
+		flex-direction: row;
+	}
+		body>header>div{
+			flex-direction: row;
+			margin-left: 1em;
+			flex-grow: 1;
+		}
+		body>section>div{
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: space-around;
+		}
+			body>section>div>article{
+				width: 46%;
+				margin:.5em;
+			}
+			
+}
+
+@media all and (min-width: 780px){
+		body>section>div>article{
+			width: 40%;
+		}
+
+		
+		}
+
+
+
+#piedepagina ul
+{
+    list-style-type: none;
+    text-align: center;
+ }
+ 
+ #piedepagina ul
+ {
+    display: inline;
+    text-align: center;
+    margin: 0 10px 0 0;
+ }
+ 
+ 
+ #logo{
+	position: relative;
+    top: -55%;
+	left:-10%;
+	
+    height: 180px;
+    width: 240px;
+    text-align: center;
+ }
+
+ /* CSS PARA LA TABLA DE TARIFAS*/
+
+ 	table, th, td {
+
+ 		border: 1px solid black !important;
+		 border-collapse: collapse;
+		margin-left: 70%;
+		margin-top: -42%;
+		 margin-bottom: 100px;
+
+ 	}
+	 #loquesea{
+		 margin-top: 25%;
+	 }
+ 	th, td {
+
+ 		padding: 12.5px;
+ 		text-align: left;
+ 	}
+
+ 	table#tablaTarifas tr:first-child {
+
+ 		background-color: #848484;
+ 	}
+
+ 	table#tablaTarifas th:hover {
+
+ 		background-color: #AEB404;
+ 	}
+
+ 	body>table>caption {
+
+ 		font-size: 2em;
+ 		font-weight: bold;
+ 		text-align: left;
+ 	}
+
+ /* PARA MODIFICAR EL FORMULARIO DE CREA ALBUM*/
+
+ 
+ /*PARA MODIFICAR EL MENU DE PERFIL PRIVADO REGISTRO.html*/	
+
+ 	body>div#menuPerfil>a {
+
+ 		background-color: #A4A4A4;
+ 		border: 1px solid black;
+ 		border-radius: 5px;
+ 		color: #FFFFFF !important;
+ 		float: left;
+ 		margin: 5px;
+ 		padding: 5px;
+
+ 	}
+
+ 	body>div#menuPerfil>a:hover, a:focus{
+
+ 		background-color: rgba(168, 46, 66, 0.842); 
+ 	}
+
+ 	body>div#menuPerfil>a:active {
+
+ 		background-color: #D8D8D8;
+ 	}
+
+ 	#footPrivado {
+
+ 		bottom: 0;
+ 		height: 15%;
+		position: absolute;
+		margin-top: 0%;
+	
+		width: 100%;
+		text-align: center;
+ 	}
+
+ 	body>nav#menuPerPrivado {
+
+ 		margin-bottom: -4.75%; 
+ 	}
+
+ 	body>p#prueba {
+
+ 		margin-left: 10px;
+ 	}
+
+/*
+#Datos, #Albumes, #crearAlbumes, #solicitarAlbumes a:link {
+	text-decoration: none;
+}
+
+#Datos, #Albumes, #crearAlbumes, #solicitarAlbumes a:visited {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+ #Datos, #Albumes, #crearAlbumes, #solicitarAlbumes a:hover {
+	color: #BDBDBD;
+	text-decoration: none;
+}
+
+#Datos, #Albumes, #crearAlbumes, #solicitarAlbumes a:active {
+	color: #000000;
+	text-decoration: none;
+}
+*/

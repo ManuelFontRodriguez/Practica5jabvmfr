@@ -1,0 +1,120 @@
+@charset "utf-8"
+
+
+
+a, a:link, a:visited {
+	background: transparent;
+	color: #0040FF;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+a:after {
+	content: none;
+}
+
+a[href=http]:after {
+	content: none;
+}
+
+body {
+	background-color: #FFFFFF !important;
+	background-image: none;
+	color: #000000 !important;
+	font-family: serif;
+	font-size: 12pt;
+	float: none;
+	margin: 10 0 10 0pt;
+	margin-left: 0.5cm;
+}
+
+/*
+body>header>a {
+	content: none !important;
+}
+*/
+
+body>section>div>article>a>div>img {
+	float: none;
+	margin-top: 1.75cm;
+	padding: 1cm;
+	height: 5cm;
+	width: 7.5cm;
+}
+
+body>section>div>article>footer>div>a, a:link, a:visited {
+	background: transparent;
+	color: #0040FF;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+body>section>div>article>h2 {
+	text-align: center;
+}
+
+body>section>div + div {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	page-break-before: avoid;
+}
+
+/*Para retocar la foto del html ultimafoto*/
+
+body>section>div>article>div>img {
+	height: 6cm;
+	width: 8cm;
+}
+
+body>section>div>article>div>footer {
+	text-align: center;
+}
+
+/*Para quitar el borde de los elemnentos de los formularios*/
+
+body>form>input {
+	border: 1 !important;
+}
+
+body>form>textarea {
+	border: 1;
+}
+
+/*
+body>section>div>article {
+	page-break-inside: always;
+}
+*/
+.tituloSec{
+	text-align: center;
+	margin-top: 0cm;
+}
+
+/*
+header, footer, nav, aside {
+	display: none;
+}
+*/
+
+ul, img, table {
+	page-break-inside: avoid;
+}
+
+#descFotos {
+	text-align: center;
+}
+
+#formPedirAlbum, #buscador, #formRegistro {
+	font-weight: bold;
+}
+
+#menuPrincipal, #loginPrincipal, #menuPerfil, #menuIconos/*, #formPedirAlbum, #formRegistro, #buscador*/{
+	display: none;
+}
+
+#logo {
+	position: static;
+	left: 4;
+	width: 7.5cm;
+}

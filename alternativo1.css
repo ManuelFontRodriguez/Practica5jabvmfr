@@ -1,0 +1,66 @@
+@charset "utf-8"
+
+body, footer {
+	font-size: 26px;
+}
+
+header, body, footer {
+	background-color: black !important;
+	color: white;
+	font-family: sans-serif;
+}
+
+body>footer>div>p {
+	font-size: 26px;
+}
+
+body>form {
+	font-size: 20px;
+}
+
+body>form>button {
+	color: #000000;
+}
+
+body>form>button:hover {
+	outline: 0.3em solid #FF0000;
+}
+
+input {
+	height: 1cm;
+	width: 5cm;
+}
+
+/*
+button, table, tr, th, td {
+	border-color: white;
+	border-width: 0.5em;
+}
+*/
+
+a {
+	color: #FF8000;
+	font-size: 20px;
+}
+
+a:visited {
+	color: #00FF00;
+}
+
+a:hover {
+	color: white;
+	outline: 0.3em solid #FF0000;
+}
+
+*:focus {
+	outline: 0.3em solid #FF0000;
+}
+
+
+img {
+	filter: invert(100%);
+}
+
+input:hover {
+	outline: 0.3em solid #FF0000;
+}
